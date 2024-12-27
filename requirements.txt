@@ -1,4 +1,4 @@
 flask
 huggingface-hub
 gunicorn
-dotenv
+python-dotenv==0.21.0
