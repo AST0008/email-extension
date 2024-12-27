@@ -24,18 +24,18 @@ def generate_email():
         # Create the prompt
         prompt = (
             f"Subject: {subject}\n\n"
-            "Write a professional email based on the subject above. The email should include:\n"
-            "- A polite greeting.\n"
-            "- A clear purpose explaining the meeting request.\n"
-            "- Relevant details about the meeting (date, time, location, and agenda).\n"
-            "- A polite closing and a call to action.\n\n"
-            "Keep the email concise, formal, and professional."
+            "Write a professional email based on the subject above. The email should:\n"
+            "- Include a polite greeting.\n"
+            "- Clearly state the purpose of the meeting.\n"
+            "- Avoid repetition and keep the response concise (100-150 words).\n"
+            "- Conclude with a polite closing.\n\n"
+            "The email should be clear, formal, and professional."
         )
 
         # Generate the email using the Hugging Face Inference API
         response = client.text_generation(
             prompt,
-            max_new_tokens=250,
+            max_new_tokens=200,
             temperature=0.7,  # Reduces randomness
             top_k=50,         # Limits sampling to the top 50 words
             top_p=0.9,        # Ensures diversity with nucleus sampling
@@ -86,3 +86,11 @@ if __name__ == "__main__":
 # # Print the generated email
 # print(response)
 
+#{"email":"Dear Dr. Smith, I am writing to invite you to a meeting on AI research.
+# I would like to discuss your recent work on the topic of artificial intelligence. 
+# I would like to know your views on the current state of the field and how we can further our collaboration. 
+# I would like to know your views on the future direction of the field and how we can further our collaboration.
+# I would like to know your views on the current state of the field and how we can further our collaboration.
+# I would like to know your views on the future direction of the field and how we can further our collaboration.
+# I would like to know your views on the current state of the field and how we can further our collaboration.
+# I would like to know your views on the current state of the field and how we can further our collaboration. I would like to know your views on the current state of the field and how we can further our collaboration. I would like to know your views on the current state of the field and how we can further our collaboration. I would like to know your views on the current state of the field and how we can further our collaboration. I would like to know your views on the current state of the field and how we can"}
