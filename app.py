@@ -36,10 +36,10 @@ def generate_email():
         response = client.text_generation(
             prompt,
             max_new_tokens=250,
-            temperature=0.5,  # Reduces randomness
+            temperature=0.7,  # Reduces randomness
             top_k=50,         # Limits sampling to the top 50 words
             top_p=0.9,        # Ensures diversity with nucleus sampling
-            repetition_penalty=2.0  # Penalizes repeated phrases
+            repetition_penalty=2.0
         )
 
         # Return the generated email
