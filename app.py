@@ -1,12 +1,15 @@
 from flask import Flask, request, jsonify
 from huggingface_hub import InferenceClient
+from dotenv import load_dotenv
+import os
 
 # Set up the Flask app
 app = Flask(__name__)
+load_dotenv()
 
 # Set up the Hugging Face Inference API client
-YOUR_HUGGINGFACE_API_KEY = "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"
-client = InferenceClient(model="google/flan-t5-large", token=YOUR_HUGGINGFACE_API_KEY)
+api_key = os.getenv("YOUR_HUGGINGFACE_API_KEY")
+client = InferenceClient(model="google/flan-t5-large", token=api_key)
 
 @app.route("/generate", methods=["POST"])
 def generate_email():
