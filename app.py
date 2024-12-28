@@ -36,9 +36,9 @@ def generate_email():
         response = client.text_generation(
             prompt,
             max_new_tokens=200,
-            temperature=0.7,  # Reduces randomness
-            top_k=50,         # Limits sampling to the top 50 words
-            top_p=0.9,        # Ensures diversity with nucleus sampling
+            temperature=0.7,  
+            top_k=50,         
+            top_p=0.9,        
             repetition_penalty=2.0
         )
 
@@ -52,45 +52,3 @@ def generate_email():
 if __name__ == "__main__":
     app.run(debug=True)
 
-
-# from huggingface_hub import InferenceClient
-
-# YOUR_HUGGINGFACE_API_KEY = "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"
-
-# # Set up the Hugging Face Inference API client
-# client = InferenceClient(model="google/flan-t5-large", token=YOUR_HUGGINGFACE_API_KEY)
-
-# # Input email subject
-# subject = "Meeting Request for Quarterly Strategy"
-# # Create a prompt
-# prompt = (
-#     f"Subject: {subject}\n\n"
-#     "Write a professional email based on the subject above. The email should include:\n"
-#     "- A polite greeting.\n"
-#     "- A clear purpose explaining the meeting request.\n"
-#     "- Relevant details about the meeting (date, time, location, and agenda).\n"
-#     "- A polite closing and a call to action.\n\n"
-#     "Keep the email concise, formal, and professional."
-# )
-
-# # Send the request
-# response = client.text_generation(
-#     prompt,
-#     max_new_tokens=250,
-#     temperature=0.5,  # Reduces randomness
-#     top_k=50,         # Limits sampling to the top 50 words
-#     top_p=0.9,        # Ensures diversity with nucleus sampling
-#     repetition_penalty=2.0  # Penalizes repeated phrases
-# )
-
-# # Print the generated email
-# print(response)
-
-#{"email":"Dear Dr. Smith, I am writing to invite you to a meeting on AI research.
-# I would like to discuss your recent work on the topic of artificial intelligence. 
-# I would like to know your views on the current state of the field and how we can further our collaboration. 
-# I would like to know your views on the future direction of the field and how we can further our collaboration.
-# I would like to know your views on the current state of the field and how we can further our collaboration.
-# I would like to know your views on the future direction of the field and how we can further our collaboration.
-# I would like to know your views on the current state of the field and how we can further our collaboration.
-# I would like to know your views on the current state of the field and how we can further our collaboration. I would like to know your views on the current state of the field and how we can further our collaboration. I would like to know your views on the current state of the field and how we can further our collaboration. I would like to know your views on the current state of the field and how we can further our collaboration. I would like to know your views on the current state of the field and how we can"}

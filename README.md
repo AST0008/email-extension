@@ -45,7 +45,7 @@ This browser extension helps users generate professional email templates based o
 This extension communicates with a backend hosted on [Railway](https://railway.app/). The backend uses the Hugging Face `flan-t5-large` model to generate email content.
 
 ### Backend Repository
-If you want to set up the backend yourself, check out the backend code here: [Backend Repository Link](https://github.com/your-username/email-boilerplate-backend).
+If you want to set up the backend yourself, check out the backend code here: [Backend Repository Link](https://github.com/AST0008/email-extension/blob/main/app.py).
 
 ---
 
