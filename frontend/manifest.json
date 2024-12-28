@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "PenPal",
+    "version": "1.0",
+    "description": "Generate email boilerplates using AI based on the subject.",
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    },
+    "permissions": ["activeTab", "scripting", "storage"],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["https://mail.google.com/*", "https://outlook.live.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "PenPal"
+    }
+  }
+  

@@ -1,0 +1,9 @@
+#generate-boilerplate-btn {
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+}
+
+#generate-boilerplate-btn:hover {
+  background-color: #0056b3;
+}
