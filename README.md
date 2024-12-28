@@ -1,4 +1,4 @@
-# Email Boilerplate Generator Extension
+# PenPal
 
 This browser extension helps users generate professional email templates based on the email subject using AI. The extension integrates with a backend powered by the Hugging Face API to create concise, formal boilerplate emails.
 
@@ -75,17 +75,7 @@ Contributions are welcome! If you find bugs or want to add features:
 
 ---
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-- [Hugging Face](https://huggingface.co/) for providing pre-trained models.
-- [Railway](https://railway.app/) for hosting the backend.
-
----
 
 ## Issues
 
