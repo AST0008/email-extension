@@ -61,7 +61,7 @@ Contributions are welcome! If you find bugs or want to add features:
 1. Fork this repository.
 2. Create a feature branch:
     ```bash
-    git checkout -b feature-name
+    git checkout -b feature-name/issue
     ```
 3. Commit your changes:
     ```bash
