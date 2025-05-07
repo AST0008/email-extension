@@ -10,6 +10,10 @@ This browser extension helps users generate professional email templates based o
 - Supports Gmail and Outlook web interfaces.
 
 ---
+## Demo
+https://youtu.be/dUlEFA_C05k
+
+---
 
 ## Installation
 
